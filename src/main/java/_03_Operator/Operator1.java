@@ -1,4 +1,4 @@
-package _01_Operator;
+package _03_Operator;
 
 public class Operator1 {
     public static void main(String[] args) {
@@ -37,7 +37,7 @@ public class Operator1 {
 
         // 실습 1) 오후 22시에서 50시간을 더하면 몇시인지 구하세요
         int now = 22;
-        int after50hour = now + (50 % 24); // 괄호 -> 우선연산
+        int after50hour = (now + 50) % 24; // 괄호 -> 우선연산
         System.out.println(after50hour);
 
 
