@@ -20,7 +20,15 @@ public class Operator5 {
         // 실습1) 키가 120 이상인 경우 탑승가능하도록 하는 삼항연산자
         // 탑승 가능한경우 "탑승가능" 불가능 하면 "탑승 불가능" 출력
         int height = 110;
-        String maxHeight = 110 <= 120 ? "탑승가능" : "탑승 불가능";
+        String result;
+        result = height >= 120 ? "탑승가능" : "탑승불가능";
+        System.out.println(result);
+
+        int postCount = 162;
+        int pageCount;
+        pageCount = postCount % 20 == 0 // 20으로 나누어 떨어지느냐?
+                ?postCount / 20 // 떨어지면, 몫을 대입하고
+                :postCount / 20 + 1; // 떨어지지 않으면 몫 + 1을 대입하라
 
     }
 }
