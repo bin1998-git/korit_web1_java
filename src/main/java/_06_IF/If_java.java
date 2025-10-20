@@ -26,7 +26,7 @@ public class If_java {
 
         // 코드는 위에서 아래로 읽는다.
         // 오름차순, 내림차순으로 작성해야 한다.
-        // else if 조건이 검사되는 경우: 위의 조건들이 모두 flase였다.
+        // else if 조건이 검사되는 경우: 위의 조건들이 모두 false였다.
         if(age <= 7) {
             System.out.println("미취학 아동");
         } else if (age <= 13) { // age > 7
@@ -46,7 +46,7 @@ public class If_java {
 
         if (!isLogin) { // 로그인이 안되었을때 실행
             System.out.println("로그인이 필요합니다");
-        } else if (isBanned) { // 로그인이 되었다고 가정하에 실행해야함
+        } else if (isBanned) { // !isLogin -? false -> isLogin: true 로그인이 되었다고 가정하에 실행해야함
             System.out.println("정지된 계정입니다");
         }
 
@@ -58,6 +58,8 @@ public class If_java {
         boolean isVIP = false;
         boolean isGOLD = true;
         boolean isSILVER = false;
+
+        //github.com/elikese
 
         }
     }

@@ -15,9 +15,11 @@ public class PersonalNumber {
         birthDate = pn.substring(0,6); // 0~5 index 문자열 추출
         int dashIndex = pn.indexOf("-"); // dash의 index를 찾는다
         birthDate = pn.substring(0, dashIndex); // 0~ 대쉬 직전까지의 문자열을 추출하라
+        System.out.println(birthDate);
 
         genderCode = pn.substring(7,8);
         genderCode = pn.substring(dashIndex +1, dashIndex +2);
+        System.out.println(genderCode);
 
 
         boolean isValidEmail;
