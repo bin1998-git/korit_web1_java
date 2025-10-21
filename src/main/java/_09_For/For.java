@@ -39,13 +39,30 @@ public class For {
         int oddSum = 0;
 
         for(int i =1; i <=100; i++) {
-            if(i % 2 == 0) {
+            if(i % 2 == 0) { // 짝수일 때
                 evenSum += i;
-            } else {
+            } else { // 홀수일 때
                 oddSum += i;
             }
         }
         System.out.println("짝수 합 :" + evenSum);
         System.out.println("호수 합 :" + oddSum);
+
+        // 1 ~ 100 숫자중 3의배수와 7의배수의 갯수를 구해주세요
+
+        int count3 = 0;
+        int count7 = 0;
+
+        for (int i = 1; i <= 100; i++) {
+
+            if(i % 3 == 0) {
+                count3++;
+            }
+            if (i % 7 == 0) {
+                count7++;
+            }
+            System.out.println("3의배수개수 :" + count3);
+            System.out.println("7의배수개수 :" + count7);
+        }
     }
 }
