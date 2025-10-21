@@ -19,7 +19,7 @@ public class WeekDiscount {
         // 월-10%, 화/수/목 = 5% , 금 =15%, 토/일-20%, 그외-0%
         switch (Day) {
             case "월요일":
-                discountPrice = 0.1;
+                discountPrice = 0.10;
                 break;
             case "화요일", "수요일", "목요일":
                 discountPrice = 0.05;
@@ -40,7 +40,7 @@ public class WeekDiscount {
         // 할인금액
         double discount =  basePrice * discountPrice;
         // 할인된 최종금액
-        double finalamount = basePrice - discount;
+        double finalamount =  basePrice - discount;
 
 
 
@@ -53,7 +53,7 @@ public class WeekDiscount {
          */
         System.out.println("오늘 : " + Day);
         System.out.println("정가: " + basePrice + "원");
-        System.out.println("할인금액 " + discountPrice + "원");
+        System.out.println("할인금액 " + discount + "원");
         System.out.println("최종가격" + finalamount);
 
     }
