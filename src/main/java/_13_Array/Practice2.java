@@ -25,7 +25,7 @@ public class Practice2 {
             if (score > max) { // 꺼내온 값이 현재 max보다 크다면
                 max = score; // 그 값을 max값으로 업데이트 하겠다
             }
-            if (score >= avg) {
+            if (score >=avg) {
                 count++;
             }
         }
