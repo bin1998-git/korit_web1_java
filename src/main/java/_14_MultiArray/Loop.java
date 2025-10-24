@@ -31,7 +31,7 @@ public class Loop {
         int evenSum = 0;
         for (int i = 0; i < nums.length; i++) {
             int[] num = nums[i]; // 숫자 배열
-            for (int j = 0; j < nums.length; j++){
+            for (int j = 0; j < num.length; j++){
                 int myNUM = num[j]; // 숫자(int)
                 if (myNUM % 2 == 0){
                     evenSum += myNUM;
@@ -39,7 +39,7 @@ public class Loop {
             }
 
         }
-        System.out.println("짝수들을 더한값을 출력하세요 " +  evenSum);
+        System.out.println("짝수들을 더한값을 출력하세요 : " +  evenSum);
 
 
         String[] departments = {"인시부", "행정부", "사업부"};
