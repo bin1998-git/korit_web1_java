@@ -30,6 +30,7 @@ public class Practice1 {
 
       // 2. 배열과 숫자를 매개변수로 받아서, 숫자가 배열에 있는지 검사하는 메서드
         int[] nums = {1, 3, 7, 9};
+        System.out.println(containsNum(nums, 8));
       // containsNum(nums, 8) -> false
 
     }
