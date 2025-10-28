@@ -24,11 +24,13 @@ public class Student {
     public Student(String name, int kor, int eng, int math) {
         System.out.println("Student 생성자 호출 됨!");
         // 매개변수로 들어온 값들을 검증해야함!
+
         boolean korValidation = validateScore(kor);
         boolean engValidation = validateScore(eng);
         boolean mathValidation = validateScore(math);
 
-        if (!korValidation && !engValidation && !mathValidation) {
+        // false면 if문 실행
+        if (!korValidation || !engValidation || !mathValidation) {
             System.out.println("점수는 0 ~ 100 이어야 합니다");
             return; // 원래라면 정의한 에러를 일으켜야한다.
         }
@@ -37,6 +39,11 @@ public class Student {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
+
+        // student1의 입장에서 student1.eng 와 this.eng는 같은 말이다.
+        // student2의 입장에서 student2.eng 와 this.eng는 같은 말이다
+
+
         /*
         this란? 객체 자신을 가르키는 참조값(주소)이다.
         Student student2 = new Student(~, ~, ~)
@@ -65,4 +72,12 @@ public class Student {
     // 기본생성자(NoArgsConstructor)
     public Student(){}
 
+    // 이름만 받아주는 생성자
+    public Student(String name) {
+        this(name, 0 ,0 ,0);
+        // this()
+        // this() != this 서로 상관없음.
+        // 같은 이름의 생성자를 호출 -> 오버로딩된 생성자를 호출.
+        // 제약사항: 생성자의 가장 첫줄에 적어줘야 한다.
+    }
 }
