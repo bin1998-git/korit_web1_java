@@ -48,7 +48,7 @@ public class BookRepository {
     // 5칸중에 실제 등록된 도서만 모아서 새로운 배열을 반환
     Book[] getBookDatas() {
         int count = 0;
-
+       
         for (int i = 0; i < books.length; i++) {
             if (books[i] != null) {
                 count++;
