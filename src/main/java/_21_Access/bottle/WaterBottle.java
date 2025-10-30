@@ -19,6 +19,7 @@ public class WaterBottle {
         this.currentWater = currentWater;
     }
     public int getCurrentWater() {
+
         return currentWater;
     }
 
