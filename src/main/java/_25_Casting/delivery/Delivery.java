@@ -14,7 +14,7 @@ public class Delivery {
 
     public int calcFee() {
 
-        return 3000; // 무슨뜻
+        return 3000; // calcFee의 값을 3000으로 지정하겠다.
     }
 
     public void printInfo() {

@@ -1,7 +1,7 @@
 package _26_Abstract;
 
 // 게임캐릭터
-public abstract class Character { // 추상메서드는 클래스 앞에도 avstract 사용해야함
+public abstract class Character { // 추상메서드는 클래스 앞에도 abstract 사용해야함
     // 추상(abstract) : 명세만 있고, 구체적인 구현은 없는 것
     // 추상클래스: 추상메서드를 하나 이상 포함하는 클래스
     // 추상메서드: 메서드의 시그니처만 정의하고, 구현(중괄호)를 생략
@@ -28,8 +28,8 @@ public abstract class Character { // 추상메서드는 클래스 앞에도 avst
     // 데미지를 받는 공통 메서드
     public void receiveDamage(int damage) {
         this.Hp -= damage;
-        if (this.Hp <=0 ){
-            this.Hp = 0; // this 생략가능할까?
+        if (this.Hp <= 0 ){
+            this.Hp = 0; // this 생략가능할까? o
             System.out.println(name + "가 쓰러졌습니다.");
         }
     }

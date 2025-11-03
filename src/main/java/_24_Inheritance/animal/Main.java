@@ -2,6 +2,10 @@ package _24_Inheritance.animal;
 
 public class Main {
     public static void main(String[] args) {
+        Cat cat = new Cat();
+
+        cat.eat();
+        cat.showInfo();
         /*
         Cat 클래스를 작성해주세요
         1. 상속 - Animal클래스
@@ -13,6 +17,8 @@ public class Main {
         5. 오버라이딩
         - eat: "고양이가 생선을 먹습니다" 출력
         - showInfo: "이름, 나이, 털색" 출력
+
+
 
 
          */
