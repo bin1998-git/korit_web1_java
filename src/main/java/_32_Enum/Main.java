@@ -1,10 +1,19 @@
 package _32_Enum;
 
+import _24_Inheritance.animal.Cat;
+
 public class Main {
     public static double discount(int price, ClassGrade grade) {
         int discountRate = 0;
         if (grade == ClassGrade.BASIC){
-            discountRate = 5;
+            // 매직넘버를 예방가능하다.
+            discountRate = ClassGrade.BASIC.getDiscountRate();
+        } else if (grade == ClassGrade.GOLD) {
+            discountRate = ClassGrade.GOLD.getDiscountRate();
+        } else if (grade == ClassGrade.DIAMOND) {
+            discountRate = ClassGrade.DIAMOND.getDiscountRate();
+        }else {
+            System.out.println("할인없음!");
         }
         return price * discountRate / 100.0;
     }
