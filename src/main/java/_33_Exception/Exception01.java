@@ -11,7 +11,7 @@ public class Exception01 {
          */
 
         int a = 10;
-        int b = 2;
+        int b = 2   ;
         // int result = a / b;
         // 사전에 정의된 예외상황이 되면 자동으로 예외객체가 생성된다.
         // 예외객체가 생성이되면 JVM이 알아채고, 코드진행을 즉시 멈춘다.

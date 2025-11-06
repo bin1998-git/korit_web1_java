@@ -47,7 +47,7 @@ public class ObjectStudent {
         return age == that.age && Objects.equals(name, that.name);
     }
 
-    // 1. equals()를 오버라이딩하면, 반드시 hashCode()도 오버라이딩 해야하낟.
+    // 1. equals()를 오버라이딩하면, 반드시 hashCode()도 오버라이딩 해야한다.
     // 2. HashMap, HashSet 등 해시기반 컬렉션 자료형때 사용 - 동등성(중복)에 관한 이야기
     // 3. 해시: 함수에 값을 넣어서 나온 값으로 비교
     @Override
