@@ -36,7 +36,7 @@ public class StringMethod {
         String str2 = new String("hello");
         System.out.println(str1);
         System.out.println(str2);
-        System.out.println(str1 ==str2);// 같을까?
+        System.out.println(str1 == str2);// 같을까?
         System.out.println(str1.equals(str2));// 문자열 값의 올바른 비교
 
         // 2. 문자열끼리 덧셈 가능하다
@@ -66,7 +66,7 @@ public class StringMethod {
         str.length(); // 문자열의 문자갯수를 가져온다.
         System.out.println("문자열 길이: " + str.length());
 
-        // 5. 대소문자 변환 // 결과타입: Strign
+        // 5. 대소문자 변환 // 결과타입: String
         System.out.println(str.toUpperCase()); // 문자열 전체를 대문자로
         System.out.println(str.toLowerCase()); // 문자열 전체를 소문자로
 
