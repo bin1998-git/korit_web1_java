@@ -12,10 +12,10 @@ public class Practice {
         // "홍길동" -> "홍길동님"
         List<String> nims = new ArrayList<>();
         // 람다 축약
-        StringProcessor makeNim = s -> s+ "님";
-        for (String name : customerNames) {
-            String addNim = makeNim.process(name);
-            nims.add(addNim);
+        StringProcessor makeNim = s -> s + "님";
+            for (String name : customerNames) {
+                String addnims = makeNim.process(name);
+                    nims.add(addnims);
         }
         System.out.println(nims);
 
@@ -33,6 +33,7 @@ public class Practice {
         for (String lower : lowers) {
             uppers.add(makeUpper.process(lower));
         }
+        System.out.println(uppers);
 
         List<String> names = List.of("김풍", "침착맨",
                 "이순신", "홍길동",
@@ -63,6 +64,6 @@ public class Practice {
             };
                 notEmptyStrings.add(input);
         }
-
+        System.out.println(notEmptyStrings);
     }
 }
