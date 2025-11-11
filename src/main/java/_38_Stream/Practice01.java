@@ -23,8 +23,21 @@ public class Practice01 {
 
         // stream 애서는 외부변수 사용이 제한(final 사용가능)
         // 누적합: reduce 최종연산자를 사용해야한다!
-        // 1. 가격들만 뽑아서, 평균가격을 출력(리턴 x -> forEach)
+        // 1. 가격들만 뽑아서, 평균가격을 출력
+        int priceSum = items.stream() // [객체1, 객체 2 .....]
+                .map(item -> item.getPrice()) // [1000000, 30000 ....]
+                .reduce(0, (sum, price) -> sum + price);
+        double avgPrice =(double) priceSum / items.size();
+        System.out.println(avgPrice);
 
+
+        // 재고 가격 총합을 reduce를 써서 구해봅시다
+        int totalSum = items.stream()
+                        .map(item -> item.getPrice() * item.getStock()) // [5000000, 0....]
+                .reduce(0, (sum, price) -> sum + price);
+        System.out.println("재고 총합" + totalSum);
+
+        // 각 재고들의 총 가격 출력(리턴 x -> forEach)
         items.stream()
                 .forEach(item -> {
                     int stock = item.getStock();
@@ -32,9 +45,9 @@ public class Practice01 {
                     System.out.println(stock * price);
                 });
 
-        int AvgPrice = 0;
-        // 2. 재고들의 총 가격 출력
-        int totalPrice = 0;
+
+
+
 
         // 3. 재고가 1개 이상이면서, 세일중인 item들 list로 콜렉팅
         List<Item> filteredItems = items.stream()
